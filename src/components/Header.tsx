@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail } from "lucide-react";
+import Navigation from "./Navigation";
 
 const Header = () => {
   return (
@@ -21,28 +22,7 @@ const Header = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-50 bg-white/20 backdrop-blur-md border-b border-white/30">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <img 
-                src="/lovable-uploads/14428e7d-807e-4d91-8238-d05eb65e7255.png" 
-                alt="Le Bellimont Santé" 
-                className="h-12 w-auto"
-              />
-              <div className="text-white">
-                <h2 className="font-bold text-lg">LE BELLIMONT SANTÉ</h2>
-                <p className="text-sm opacity-90">MAISON DE SANTÉ PLURIDISCIPLINAIRE</p>
-              </div>
-            </div>
-            <div className="hidden md:flex items-center space-x-8 text-white">
-              <a href="#equipe" className="hover:text-medical-accent transition-colors">Équipe</a>
-              <a href="#avantages" className="hover:text-medical-accent transition-colors">Avantages MSP</a>
-              <a href="#contact" className="hover:text-medical-accent transition-colors">Contact</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation transparent={true} />
 
       {/* Hero Content */}
       <div className="relative z-20 text-center text-white px-6 animate-fade-in">

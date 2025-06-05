@@ -2,8 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, BookOpen, Clock, Users, Award } from "lucide-react";
-import { Link } from "react-router-dom";
+import { BookOpen, Clock, Users, Award } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 const Stagiaires = () => {
   const stageTypes = [
@@ -51,17 +51,10 @@ const Stagiaires = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <div className="container mx-auto px-6 py-20">
-        <div className="mb-8">
-          <Link to="/">
-            <Button variant="ghost" className="mb-4">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Retour à l'accueil
-            </Button>
-          </Link>
-        </div>
-
+    <div className="page-background">
+      <Navigation />
+      
+      <div className="container mx-auto px-6 pt-24 pb-20">
         <div className="text-center mb-16 animate-fade-in">
           <div className="text-6xl mb-6">📚</div>
           <h1 className="text-4xl md:text-5xl font-bold text-medical-gray-800 mb-6">

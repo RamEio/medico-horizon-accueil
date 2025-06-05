@@ -93,10 +93,11 @@
     @apply text-foreground;
     font-family: 'Inter', sans-serif;
     background: 
-      radial-gradient(circle at 20% 80%, rgba(232, 180, 232, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(180, 168, 246, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(125, 211, 252, 0.06) 0%, transparent 50%),
-      linear-gradient(135deg, #FAFBFC 0%, #F5F7FA 50%, #FAFBFC 100%);
+      radial-gradient(circle at 20% 80%, rgba(232, 180, 232, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(180, 168, 246, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(125, 211, 252, 0.12) 0%, transparent 50%),
+      radial-gradient(circle at 60% 10%, rgba(134, 239, 172, 0.08) 0%, transparent 50%),
+      linear-gradient(135deg, #FAFBFC 0%, #F5F7FA 30%, #EEF2F8 60%, #FAFBFC 100%);
     background-attachment: fixed;
     min-height: 100vh;
   }
@@ -109,7 +110,7 @@
     width: 100%;
     height: 100%;
     background-image: 
-      radial-gradient(circle at 1px 1px, rgba(168, 179, 192, 0.15) 1px, transparent 0);
+      radial-gradient(circle at 1px 1px, rgba(168, 179, 192, 0.2) 1px, transparent 0);
     background-size: 20px 20px;
     pointer-events: none;
     z-index: -1;
@@ -130,5 +131,14 @@
   
   .video-overlay {
     background: linear-gradient(45deg, rgba(232, 180, 232, 0.6) 0%, rgba(180, 168, 246, 0.4) 50%, rgba(125, 211, 252, 0.3) 100%);
+  }
+
+  .page-background {
+    background: 
+      radial-gradient(circle at 25% 75%, rgba(232, 180, 232, 0.12) 0%, transparent 60%),
+      radial-gradient(circle at 75% 25%, rgba(180, 168, 246, 0.12) 0%, transparent 60%),
+      radial-gradient(circle at 50% 50%, rgba(125, 211, 252, 0.08) 0%, transparent 70%),
+      linear-gradient(135deg, #FAFBFC 0%, #F5F7FA 30%, #EEF2F8 60%, #FAFBFC 100%);
+    min-height: 100vh;
   }
 }

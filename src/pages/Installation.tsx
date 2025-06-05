@@ -2,8 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowLeft, Handshake, Home, Users, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Handshake, Home, Users, TrendingUp } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 const Installation = () => {
   const collaborationTypes = [
@@ -51,17 +51,10 @@ const Installation = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-medical-gray-50">
-      <div className="container mx-auto px-6 py-20">
-        <div className="mb-8">
-          <Link to="/">
-            <Button variant="ghost" className="mb-4">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Retour à l'accueil
-            </Button>
-          </Link>
-        </div>
-
+    <div className="page-background">
+      <Navigation />
+      
+      <div className="container mx-auto px-6 pt-24 pb-20">
         <div className="text-center mb-16 animate-fade-in">
           <div className="text-6xl mb-6">🤝</div>
           <h1 className="text-4xl md:text-5xl font-bold text-medical-gray-800 mb-6">
@@ -78,7 +71,7 @@ const Installation = () => {
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {collaborationTypes.map((type, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm border-medical-gray-200/50">
                 <CardHeader className="text-center">
                   <CardTitle className={`text-${type.color}`}>{type.title}</CardTitle>
                 </CardHeader>
@@ -108,7 +101,7 @@ const Installation = () => {
               {support.map((item, index) => {
                 const IconComponent = item.icon;
                 return (
-                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <Card key={index} className="hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm border-medical-gray-200/50">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
                         <div className="bg-medical-green/10 rounded-lg p-3">
@@ -128,7 +121,7 @@ const Installation = () => {
 
           <div>
             <h2 className="text-3xl font-bold text-medical-gray-800 mb-8">Profil recherché</h2>
-            <Card className="mb-8">
+            <Card className="mb-8 bg-white/80 backdrop-blur-sm border-medical-gray-200/50">
               <CardContent className="p-6">
                 <h3 className="font-bold text-medical-gray-800 mb-4">Nous recherchons :</h3>
                 <ul className="space-y-3 mb-6">
