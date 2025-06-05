@@ -45,7 +45,7 @@ const Internes = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-medical-gray-50">
+    <div className="min-h-screen">
       <div className="container mx-auto px-6 py-20">
         <div className="mb-8">
           <Link to="/">
@@ -71,10 +71,10 @@ const Internes = () => {
             <h2 className="text-3xl font-bold text-medical-gray-800 mb-8">Stages d'internat proposés</h2>
             <div className="space-y-8">
               {internshipDetails.map((internship, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm border-medical-gray-200/50">
                   <CardHeader>
                     <CardTitle className="text-medical-secondary">{internship.title}</CardTitle>
-                    <Badge className="w-fit bg-medical-primary/10 text-medical-primary">
+                    <Badge className="w-fit bg-medical-primary/20 text-medical-gray-700">
                       {internship.duration}
                     </Badge>
                   </CardHeader>
@@ -103,10 +103,10 @@ const Internes = () => {
               {supervision.map((item, index) => {
                 const IconComponent = item.icon;
                 return (
-                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <Card key={index} className="hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm border-medical-gray-200/50">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
-                        <div className="bg-medical-secondary/10 rounded-lg p-3">
+                        <div className="bg-medical-secondary/20 rounded-lg p-3">
                           <IconComponent className="h-6 w-6 text-medical-secondary" />
                         </div>
                         <div>
@@ -120,7 +120,7 @@ const Internes = () => {
               })}
             </div>
 
-            <Card className="mt-8 bg-gradient-to-r from-medical-secondary to-medical-accent text-white">
+            <Card className="mt-8 bg-gradient-to-r from-medical-secondary to-medical-accent text-medical-gray-800">
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-4">Conditions d'accueil</h3>
                 <ul className="space-y-2 mb-6 opacity-90">
@@ -129,7 +129,7 @@ const Internes = () => {
                   <li>• Accès aux formations continues</li>
                   <li>• Intégration équipe médicale</li>
                 </ul>
-                <Button variant="secondary" size="lg" className="w-full">
+                <Button variant="secondary" size="lg" className="w-full bg-white/80 text-medical-gray-800">
                   Candidater pour un stage
                 </Button>
               </CardContent>

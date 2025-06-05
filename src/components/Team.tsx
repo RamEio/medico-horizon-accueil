@@ -73,7 +73,7 @@ const Team = () => {
   ];
 
   return (
-    <section id="equipe" className="py-20 bg-gradient-to-b from-white to-medical-gray-50">
+    <section id="equipe" className="py-20 bg-white/30 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-medical-gray-800 mb-6">
@@ -88,16 +88,16 @@ const Team = () => {
           {teamMembers.map((member, index) => {
             const IconComponent = member.icon;
             return (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-0 shadow-lg animate-slide-in-left" style={{ animationDelay: `${index * 0.2}s` }}>
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-medical-gray-200/50 shadow-lg animate-slide-in-left bg-white/80 backdrop-blur-sm" style={{ animationDelay: `${index * 0.2}s` }}>
                 <CardContent className="p-6 text-center">
                   <div className="relative mb-6">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-medical-primary/20"
+                      className="w-24 h-24 rounded-full mx-auto object-cover border-4 border-medical-primary/30"
                     />
                     <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-medical-primary rounded-full p-2">
-                      <IconComponent className="h-4 w-4 text-white" />
+                      <IconComponent className="h-4 w-4 text-medical-gray-800" />
                     </div>
                   </div>
                   
@@ -105,7 +105,7 @@ const Team = () => {
                     {member.name}
                   </h3>
                   
-                  <Badge className="mb-3 bg-medical-secondary/10 text-medical-secondary border-medical-secondary/20">
+                  <Badge className="mb-3 bg-medical-secondary/20 text-medical-gray-700 border-medical-secondary/30">
                     {member.specialty}
                   </Badge>
                   
@@ -122,7 +122,7 @@ const Team = () => {
           })}
         </div>
 
-        <div className="bg-gradient-to-r from-medical-primary to-medical-secondary rounded-2xl p-8 text-white animate-fade-in">
+        <div className="bg-gradient-to-r from-medical-primary to-medical-secondary rounded-2xl p-8 text-medical-gray-800 animate-fade-in shadow-lg">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold mb-4">Rejoignez Notre Équipe</h3>
             <p className="text-lg opacity-90 max-w-3xl mx-auto">
@@ -133,12 +133,12 @@ const Team = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {profiles.map((profile, index) => (
               <Link key={index} to={profile.path}>
-                <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 group">
+                <Card className="bg-white/30 backdrop-blur-sm border-white/40 hover:bg-white/50 transition-all duration-300 hover:-translate-y-1 group">
                   <CardContent className="p-6 text-center">
                     <div className="text-4xl mb-4">{profile.icon}</div>
-                    <h4 className="text-xl font-bold text-white mb-2">{profile.title}</h4>
-                    <p className="text-white/80 text-sm mb-4">{profile.description}</p>
-                    <Button variant="secondary" size="sm" className="group-hover:scale-105 transition-transform">
+                    <h4 className="text-xl font-bold text-medical-gray-800 mb-2">{profile.title}</h4>
+                    <p className="text-medical-gray-700 text-sm mb-4">{profile.description}</p>
+                    <Button variant="secondary" size="sm" className="group-hover:scale-105 transition-transform bg-white/70 text-medical-gray-800">
                       En savoir plus <ArrowRight className="h-4 w-4 ml-1" />
                     </Button>
                   </CardContent>

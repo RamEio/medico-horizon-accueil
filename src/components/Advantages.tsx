@@ -81,7 +81,7 @@ const Advantages = () => {
   ];
 
   return (
-    <section id="avantages" className="py-20 bg-gradient-to-b from-medical-gray-50 to-white">
+    <section id="avantages" className="py-20 bg-white/20 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-medical-gray-800 mb-6">
@@ -107,9 +107,9 @@ const Advantages = () => {
             {patientAdvantages.map((advantage, index) => {
               const IconComponent = advantage.icon;
               return (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg animate-slide-in-left" style={{ animationDelay: `${index * 0.1}s` }}>
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-medical-gray-200/50 shadow-lg animate-slide-in-left bg-white/70 backdrop-blur-sm" style={{ animationDelay: `${index * 0.1}s` }}>
                   <CardHeader className="text-center pb-4">
-                    <div className={`w-16 h-16 mx-auto rounded-full bg-${advantage.color}/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    <div className={`w-16 h-16 mx-auto rounded-full bg-${advantage.color}/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                       <IconComponent className={`h-8 w-8 text-${advantage.color}`} />
                     </div>
                     <CardTitle className="text-lg text-medical-gray-800">
@@ -142,9 +142,9 @@ const Advantages = () => {
             {professionalAdvantages.map((advantage, index) => {
               const IconComponent = advantage.icon;
               return (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-medical-gray-200/50 shadow-lg animate-fade-in bg-white/70 backdrop-blur-sm" style={{ animationDelay: `${index * 0.1}s` }}>
                   <CardHeader className="pb-4">
-                    <div className={`w-12 h-12 rounded-lg bg-${advantage.color}/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                    <div className={`w-12 h-12 rounded-lg bg-${advantage.color}/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
                       <IconComponent className={`h-6 w-6 text-${advantage.color}`} />
                     </div>
                     <CardTitle className="text-lg text-medical-gray-800">

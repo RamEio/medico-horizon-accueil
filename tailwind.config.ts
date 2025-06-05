@@ -63,25 +63,25 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Couleurs personnalisées du cabinet médical
+				// Couleurs pastels adoucies pour la maison médicale
 				medical: {
-					primary: '#D946EF', // Magenta principal
-					secondary: '#8B5CF6', // Violet
-					accent: '#06B6D4', // Cyan/turquoise
-					green: '#10B981', // Vert médical
-					lightBlue: '#3B82F6', // Bleu clair
-					purple: '#A855F7', // Violet clair
+					primary: '#E8B4E8', // Magenta pastel
+					secondary: '#B4A8F6', // Violet pastel
+					accent: '#7DD3FC', // Cyan pastel
+					green: '#86EFAC', // Vert pastel
+					lightBlue: '#93C5FD', // Bleu pastel
+					purple: '#C4B5FD', // Violet clair pastel
 					gray: {
-						50: '#F8FAFC',
-						100: '#F1F5F9',
-						200: '#E2E8F0',
-						300: '#CBD5E1',
-						400: '#94A3B8',
-						500: '#64748B',
-						600: '#475569',
-						700: '#334155',
-						800: '#1E293B',
-						900: '#0F172A'
+						50: '#FAFBFC',
+						100: '#F5F7FA',
+						200: '#E5E8ED',
+						300: '#D1D6DC',
+						400: '#A8B3C0',
+						500: '#7A8A9A',
+						600: '#6B7A8A',
+						700: '#5A687A',
+						800: '#4A556A',
+						900: '#3A455A'
 					}
 				}
 			},

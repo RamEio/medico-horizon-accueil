@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Play, MapPin, Phone, Mail } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 const Header = () => {
   return (
@@ -21,7 +21,7 @@ const Header = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
+      <nav className="absolute top-0 left-0 right-0 z-50 bg-white/20 backdrop-blur-md border-b border-white/30">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -55,11 +55,11 @@ const Header = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button size="lg" className="bg-medical-primary hover:bg-medical-secondary text-white border-0 px-8 py-3">
+          <Button size="lg" className="bg-medical-primary/80 hover:bg-medical-primary text-medical-gray-800 border-0 px-8 py-3">
             <MapPin className="mr-2 h-5 w-5" />
             Découvrir notre cabinet
           </Button>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-medical-primary px-8 py-3">
+          <Button size="lg" variant="outline" className="border-white/60 text-white hover:bg-white/20 hover:text-white px-8 py-3">
             <Phone className="mr-2 h-5 w-5" />
             Nous contacter
           </Button>
@@ -84,8 +84,8 @@ const Header = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white rounded-full mt-2 animate-bounce"></div>
+        <div className="w-6 h-10 border-2 border-white/60 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/80 rounded-full mt-2 animate-bounce"></div>
         </div>
       </div>
     </header>

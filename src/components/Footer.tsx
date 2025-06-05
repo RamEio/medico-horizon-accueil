@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="bg-medical-gray-900 text-white py-16">
+    <footer id="contact" className="bg-medical-gray-800 text-white py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Logo et Description */}
@@ -24,10 +24,10 @@ const Footer = () => {
               alliant expertise médicale et approche humaine au service de votre bien-être.
             </p>
             <div className="flex space-x-4">
-              <div className="w-10 h-10 rounded-full bg-medical-primary/20 flex items-center justify-center hover:bg-medical-primary/30 transition-colors cursor-pointer">
+              <div className="w-10 h-10 rounded-full bg-medical-primary/30 flex items-center justify-center hover:bg-medical-primary/40 transition-colors cursor-pointer">
                 <span className="text-medical-primary font-bold">f</span>
               </div>
-              <div className="w-10 h-10 rounded-full bg-medical-secondary/20 flex items-center justify-center hover:bg-medical-secondary/30 transition-colors cursor-pointer">
+              <div className="w-10 h-10 rounded-full bg-medical-secondary/30 flex items-center justify-center hover:bg-medical-secondary/40 transition-colors cursor-pointer">
                 <span className="text-medical-secondary font-bold">in</span>
               </div>
             </div>
@@ -91,7 +91,7 @@ const Footer = () => {
               </div>
             </div>
             
-            <div className="mt-6 p-4 bg-medical-primary/10 rounded-lg border border-medical-primary/20">
+            <div className="mt-6 p-4 bg-medical-primary/20 rounded-lg border border-medical-primary/30">
               <p className="text-sm text-medical-primary font-medium mb-2">Urgences</p>
               <p className="text-xs text-medical-gray-300">
                 En cas d'urgence en dehors des heures d'ouverture, contactez le 15 (SAMU) ou le 112
@@ -100,7 +100,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-medical-gray-700 mt-12 pt-8">
+        <div className="border-t border-medical-gray-600 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-medical-gray-400 text-sm">
               © 2024 Le Bellimont Santé. Tous droits réservés.

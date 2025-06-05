@@ -51,7 +51,7 @@ const Stagiaires = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-medical-gray-50">
+    <div className="min-h-screen">
       <div className="container mx-auto px-6 py-20">
         <div className="mb-8">
           <Link to="/">
@@ -77,10 +77,10 @@ const Stagiaires = () => {
             <h2 className="text-3xl font-bold text-medical-gray-800 mb-8">Types de stages proposés</h2>
             <div className="space-y-6">
               {stageTypes.map((stage, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
+                <Card key={index} className="hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm border-medical-gray-200/50">
                   <CardHeader>
                     <CardTitle className="text-medical-primary">{stage.title}</CardTitle>
-                    <Badge className="w-fit bg-medical-secondary/10 text-medical-secondary">
+                    <Badge className="w-fit bg-medical-secondary/20 text-medical-gray-700">
                       {stage.duration}
                     </Badge>
                   </CardHeader>
@@ -106,10 +106,10 @@ const Stagiaires = () => {
               {advantages.map((advantage, index) => {
                 const IconComponent = advantage.icon;
                 return (
-                  <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <Card key={index} className="hover:shadow-lg transition-shadow bg-white/80 backdrop-blur-sm border-medical-gray-200/50">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
-                        <div className="bg-medical-primary/10 rounded-lg p-3">
+                        <div className="bg-medical-primary/20 rounded-lg p-3">
                           <IconComponent className="h-6 w-6 text-medical-primary" />
                         </div>
                         <div>
@@ -123,13 +123,13 @@ const Stagiaires = () => {
               })}
             </div>
 
-            <Card className="mt-8 bg-gradient-to-r from-medical-primary to-medical-secondary text-white">
+            <Card className="mt-8 bg-gradient-to-r from-medical-primary to-medical-secondary text-medical-gray-800">
               <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold mb-4">Candidature spontanée</h3>
                 <p className="mb-6 opacity-90">
                   Envoyez-nous votre CV et lettre de motivation pour rejoindre notre équipe
                 </p>
-                <Button variant="secondary" size="lg">
+                <Button variant="secondary" size="lg" className="bg-white/80 text-medical-gray-800">
                   Postuler maintenant
                 </Button>
               </CardContent>
