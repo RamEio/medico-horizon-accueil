@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <header className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -14,7 +14,7 @@ const Header = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761" type="video/mp4" />
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
           {/* Fallback background image */}
         </video>
         <div className="absolute inset-0 video-overlay"></div>
@@ -46,11 +46,11 @@ const Header = () => {
 
       {/* Hero Content */}
       <div className="relative z-20 text-center text-white px-6 animate-fade-in">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Votre Santé, <br />
           <span className="text-gradient">Notre Priorité</span>
         </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+        <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto opacity-90">
           Une approche pluridisciplinaire au cœur de Bellimont pour votre bien-être et celui de nos futurs praticiens
         </p>
         
@@ -59,7 +59,7 @@ const Header = () => {
             <MapPin className="mr-2 h-5 w-5" />
             Découvrir notre cabinet
           </Button>
-          <Button size="lg" variant="outline" className="border-white/60 text-white hover:bg-white/20 hover:text-white px-8 py-3">
+          <Button size="lg" className="bg-black hover:bg-gray-800 text-white border-0 px-8 py-3">
             <Phone className="mr-2 h-5 w-5" />
             Nous contacter
           </Button>
