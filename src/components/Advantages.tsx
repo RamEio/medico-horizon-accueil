@@ -1,6 +1,5 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { 
   Users, 
   Clock, 
@@ -139,7 +138,7 @@ const Advantages = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {professionalAdvantages.map((advantage, index) => {
               const IconComponent = advantage.icon;
               return (
@@ -160,27 +159,6 @@ const Advantages = () => {
                 </Card>
               );
             })}
-          </div>
-
-          <div className="bg-gradient-to-r from-medical-primary to-medical-secondary rounded-2xl p-8 text-white text-center animate-fade-in">
-            <h4 className="text-2xl font-bold mb-4">Intéressé par une Collaboration ?</h4>
-            <p className="mb-6 opacity-90 max-w-2xl mx-auto">
-              Que vous soyez étudiant en médecine, interne, ou praticien confirmé, nous serions ravis d'échanger avec vous sur les opportunités de collaboration
-            </p>
-            <div className="flex flex-wrap gap-3 justify-center">
-              <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
-                📚 Stages d'externat
-              </Badge>
-              <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
-                🏥 Internat
-              </Badge>
-              <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
-                👨‍⚕️ Remplacements
-              </Badge>
-              <Badge variant="secondary" className="bg-white/20 text-white border-white/30">
-                🤝 Collaborations
-              </Badge>
-            </div>
           </div>
         </div>
       </div>

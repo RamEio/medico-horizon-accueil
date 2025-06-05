@@ -1,7 +1,9 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Stethoscope, Heart, Brain, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Stethoscope, Heart, Brain, User, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Team = () => {
   const teamMembers = [
@@ -39,6 +41,37 @@ const Team = () => {
     }
   ];
 
+  const profiles = [
+    {
+      title: "Stagiaires",
+      description: "Stages d'externat et formations",
+      path: "/stagiaires",
+      icon: "📚",
+      color: "medical-primary"
+    },
+    {
+      title: "Internes",
+      description: "Internat de médecine générale",
+      path: "/internes",
+      icon: "🏥",
+      color: "medical-secondary"
+    },
+    {
+      title: "Remplacements",
+      description: "Remplacements ponctuels",
+      path: "/remplacements",
+      icon: "👨‍⚕️",
+      color: "medical-accent"
+    },
+    {
+      title: "Installation",
+      description: "Collaboration et installation",
+      path: "/installation",
+      icon: "🤝",
+      color: "medical-green"
+    }
+  ];
+
   return (
     <section id="equipe" className="py-20 bg-gradient-to-b from-white to-medical-gray-50">
       <div className="container mx-auto px-6">
@@ -51,7 +84,7 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {teamMembers.map((member, index) => {
             const IconComponent = member.icon;
             return (
@@ -89,23 +122,29 @@ const Team = () => {
           })}
         </div>
 
-        <div className="mt-16 text-center bg-gradient-to-r from-medical-primary/10 to-medical-secondary/10 rounded-2xl p-8 animate-fade-in">
-          <h3 className="text-2xl font-bold text-medical-gray-800 mb-4">
-            Rejoignez Notre Équipe
-          </h3>
-          <p className="text-medical-gray-600 mb-6 max-w-2xl mx-auto">
-            Nous sommes toujours à la recherche de nouveaux praticiens passionnés pour enrichir notre équipe pluridisciplinaire
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Badge variant="outline" className="text-medical-primary border-medical-primary">
-              Stages disponibles
-            </Badge>
-            <Badge variant="outline" className="text-medical-secondary border-medical-secondary">
-              Remplacements
-            </Badge>
-            <Badge variant="outline" className="text-medical-green border-medical-green">
-              Collaborations
-            </Badge>
+        <div className="bg-gradient-to-r from-medical-primary to-medical-secondary rounded-2xl p-8 text-white animate-fade-in">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold mb-4">Rejoignez Notre Équipe</h3>
+            <p className="text-lg opacity-90 max-w-3xl mx-auto">
+              Que vous soyez étudiant en médecine, interne, ou praticien confirmé, découvrez les opportunités qui correspondent à votre profil
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {profiles.map((profile, index) => (
+              <Link key={index} to={profile.path}>
+                <Card className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 group">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-4xl mb-4">{profile.icon}</div>
+                    <h4 className="text-xl font-bold text-white mb-2">{profile.title}</h4>
+                    <p className="text-white/80 text-sm mb-4">{profile.description}</p>
+                    <Button variant="secondary" size="sm" className="group-hover:scale-105 transition-transform">
+                      En savoir plus <ArrowRight className="h-4 w-4 ml-1" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
