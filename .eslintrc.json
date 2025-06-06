@@ -1,0 +1,82 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime"
+  ],
+  "ignorePatterns": ["dist", ".eslintrc.json"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react-refresh", "react", "@typescript-eslint"],
+  "rules": {
+    // Règles de sécurité
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-new-func": "error",
+    "no-script-url": "error",
+    "no-unsafe-optional-chaining": "error",
+    "no-unsafe-regex": "error",
+    "no-unsafe-return": "error",
+    "no-unsafe-call": "error",
+    "no-unsafe-member-access": "error",
+    "no-unsafe-assignment": "error",
+    "no-unsafe-argument": "error",
+    "no-unsafe-optional-chaining": "error",
+    "no-unsafe-regex": "error",
+    "no-unsafe-return": "error",
+    "no-unsafe-call": "error",
+    "no-unsafe-member-access": "error",
+    "no-unsafe-assignment": "error",
+    "no-unsafe-argument": "error",
+    
+    // Protection contre les injections
+    "react/no-danger": "error",
+    "react/no-danger-with-children": "error",
+    "react/no-unsafe": ["error", { "checkAliases": true }],
+    
+    // Bonnes pratiques React
+    "react/jsx-no-script-url": "error",
+    "react/jsx-no-target-blank": "error",
+    "react/jsx-no-undef": "error",
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/no-children-prop": "error",
+    "react/no-deprecated": "error",
+    "react/no-direct-mutation-state": "error",
+    "react/no-find-dom-node": "error",
+    "react/no-is-mounted": "error",
+    "react/no-render-return-value": "error",
+    "react/no-string-refs": "error",
+    "react/no-unknown-property": "error",
+    "react/require-render-return": "error",
+    "react/self-closing-comp": "error",
+    
+    // TypeScript
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-unsafe-assignment": "error",
+    "@typescript-eslint/no-unsafe-member-access": "error",
+    "@typescript-eslint/no-unsafe-call": "error",
+    "@typescript-eslint/no-unsafe-return": "error",
+    "@typescript-eslint/no-unsafe-argument": "error",
+    "@typescript-eslint/no-unsafe-optional-chaining": "error",
+    "@typescript-eslint/no-unsafe-regex": "error",
+    
+    // Autres règles
+    "react-refresh/only-export-components": [
+      "warn",
+      { "allowConstantExport": true }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+} 

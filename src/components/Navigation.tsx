@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -31,12 +30,11 @@ const Navigation = ({ transparent = false }) => {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className={`hidden md:flex items-center space-x-8 ${textClasses}`}>
-            <Link to="/stagiaires" className="hover:text-medical-primary transition-colors">Stagiaires</Link>
-            <Link to="/internes" className="hover:text-medical-primary transition-colors">Internes</Link>
-            <Link to="/remplacements" className="hover:text-medical-primary transition-colors">Remplacements</Link>
-            <Link to="/installation" className="hover:text-medical-primary transition-colors">Installation</Link>
-            <Link to="/#contact" className="hover:text-medical-primary transition-colors">Contact</Link>
+          <div className="hidden md:flex items-center space-x-8">
+            <Link to="/stagiaires" className={`hover:text-medical-primary transition-colors ${textClasses}`}>Stagiaires</Link>
+            <Link to="/internes" className={`hover:text-medical-primary transition-colors ${textClasses}`}>Internes</Link>
+            <Link to="/remplacements" className={`hover:text-medical-primary transition-colors ${textClasses}`}>Remplacements</Link>
+            <Link to="/installation" className={`hover:text-medical-primary transition-colors ${textClasses}`}>Installation</Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -80,13 +78,6 @@ const Navigation = ({ transparent = false }) => {
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Installation
-            </Link>
-            <Link 
-              to="/#contact" 
-              className="block hover:text-medical-primary transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Contact
             </Link>
           </div>
         )}
