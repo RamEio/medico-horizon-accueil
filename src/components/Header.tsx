@@ -14,7 +14,7 @@ const Header = () => {
           playsInline
           className="w-full h-full object-cover scale-105"
         >
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4" />
+          <source src="/drone_video_sample.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
       </div>
