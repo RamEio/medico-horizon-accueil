@@ -1,11 +1,10 @@
-
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail } from "lucide-react";
 import Navigation from "./Navigation";
 
 const Header = () => {
   return (
-    <header className="relative h-screen flex items-center justify-center overflow-hidden">
+    <header className="relative h-[80vh] flex items-center justify-center overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
@@ -15,7 +14,7 @@ const Header = () => {
           playsInline
           className="w-full h-full object-cover"
         >
-          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+          <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4" />
           {/* Fallback background image */}
         </video>
         <div className="absolute inset-0 video-overlay"></div>
